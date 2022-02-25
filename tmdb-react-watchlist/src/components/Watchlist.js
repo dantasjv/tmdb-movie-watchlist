@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Watchlist = () => {
   return (
-    <div>Watchlist Page</div>
+    <h1>Watchlist Page</h1>
   )
 }
 
