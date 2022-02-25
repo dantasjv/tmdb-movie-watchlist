@@ -6,9 +6,11 @@ import { Watched } from './components/Watched';
 import { Add } from './components/Add';
 import './App.css';
 import './lib/font-awesome/CSS/all.min.css';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
+    <GlobalProvider>
     <Router>
       <Header />
 
@@ -27,6 +29,7 @@ function App() {
 
       </Switch>
     </Router>
+    </GlobalProvider>
   );
 }
 

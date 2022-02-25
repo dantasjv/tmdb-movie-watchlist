@@ -15,13 +15,16 @@ export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
 // actions
-const addMovieToWatchLIst = movie => {
+const addMovieToWatchList = movie => {
   dispatch( {type: "ADD_MOVIE_TO_WATCHLIST", payload: movie })
 }
 
   return (
     <GlobalContext.Provider 
-      value={{ watchlist: state.watchlist, watched: state.watched}}
+      value={{ 
+        watchlist: state.watchlist,
+        watched: state.watched, 
+        addMovieToWatchList, }}
       >
         {props.children}
     </GlobalContext.Provider>
