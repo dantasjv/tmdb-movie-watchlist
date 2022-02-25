@@ -13,15 +13,15 @@ function App() {
       <Header />
 
       <Switch>
-        <Route exact path='/'>
+        <Route exact path="/">
           <Watchlist />
         </Route>
 
-        <Route exact path='/watched'>
+        <Route exact path="/watched">
           <Watched />
         </Route>
 
-        <Route exact path='/add'>
+        <Route exact path="/add">
           <Add />
         </Route>
 
