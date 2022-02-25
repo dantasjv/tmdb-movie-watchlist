@@ -23,7 +23,7 @@ export const ResultCard = ({movie}) => {
          </div>
 
           <div className="controls">
-            <button className="btn">Add to watchlist</button>
+            <button className="btn">Add to Watchlist</button>
 
           </div>
 
