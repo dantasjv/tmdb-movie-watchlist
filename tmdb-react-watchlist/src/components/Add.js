@@ -7,10 +7,10 @@ export const Add = () => {
     event.preventDefault();
 
     setQuery(event.target.value);
-  }
 
+    fetch(``)
 
-
+  };
 
   return (
     <div className="add-page">
