@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 export const Add = () => {
   const [query, setQuery] = useState("");
+  const [results, setResults] = useState([]);
 
   const onChange = (event) => {
     event.preventDefault();
@@ -11,7 +12,11 @@ export const Add = () => {
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${event.target.value}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        if(!data.errors) {
+          setResults(data.results);
+        } else {
+          setResults([]);
+        }
       });
   };
 
