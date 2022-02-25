@@ -43,11 +43,10 @@ export const Add = () => {
               ))}
             </ul>
           )} 
-
         </div>  
+        
       </div>
-
     </div>
-  )
+  );
 }
 
