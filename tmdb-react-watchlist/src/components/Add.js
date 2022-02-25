@@ -8,13 +8,16 @@ export const Add = () => {
 
     setQuery(event.target.value);
 
-    fetch(``)
-
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${event.target.value}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
     <div className="add-page">
-      <div clasName="container">
+      <div className="container">
         <div className="add-content">
           <div className="input-wrapper">
           <input 
