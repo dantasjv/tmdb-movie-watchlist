@@ -1,9 +1,8 @@
 import React from 'react'
 
-const Watched = () => {
+export const Watched = () => {
   return (
     <div>Watched</div>
   )
 }
 
-export default Watched
