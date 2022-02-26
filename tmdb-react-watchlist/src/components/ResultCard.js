@@ -2,9 +2,12 @@ import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
 export const ResultCard = ({movie}) => {
-  const { addMovieToWatchList } = useContext(GlobalContext);
+  const { addMovieToWatchList, watchlist } = useContext(GlobalContext);
 
-  
+  let storedMovie = watchlist.find(object => object.id === movie.id);
+
+  const watchlistDisabled = storedMovie ? true : false;
+
   return (
     <div className="result-card">
       <div className="poster-wrapper">
@@ -29,6 +32,7 @@ export const ResultCard = ({movie}) => {
           <div className="controls">
             <button 
               className="btn"
+              disabled={ watchlistDisabled }
               onClick={() => addMovieToWatchList(movie)}
             >
               Add to Watchlist
