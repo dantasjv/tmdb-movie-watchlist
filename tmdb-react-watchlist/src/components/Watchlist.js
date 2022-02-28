@@ -25,6 +25,6 @@ export const Watchlist = () => {
         
       </div>
     </div>
-  )
-}
+  );
+};
 
